@@ -8,6 +8,7 @@ homepage = "https://github.com/neoeinstein/protoc-gen-prost"
 documentation = "https://docs.rs/protoc-gen-tonic"
 license = "Apache-2.0"
 edition = "2021"
+rust-version = "1.75.0"
 readme = "README.md"
 keywords = ["protobuf", "serialization", "prost", "grpc", "tonic"]
 categories = ["encoding"]
