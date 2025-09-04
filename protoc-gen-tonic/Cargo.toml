@@ -27,3 +27,4 @@ quote = "1.0"
 regex.workspace = true
 syn = { version = "2.0.22", features = ["parsing", "full"] }
 tonic-build.workspace = true
+tonic-prost.workspace = true
