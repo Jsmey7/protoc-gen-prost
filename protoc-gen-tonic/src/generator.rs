@@ -75,7 +75,7 @@ impl tonic_build::Method for ProstMethod {
     }
 
     fn codec_path(&self) -> &str {
-        "extern crate tonic_prost"
+        "crate tonic_prost::codec::ProstCodec"
     }
 
     fn client_streaming(&self) -> bool {
@@ -190,7 +190,10 @@ impl TonicGenerator {
 
             res.push(File {
                 name: Some(output_filename),
-                content: Some(format!("// @generated\n{}", prettyplease::unparse(&file))),
+                content: Some(format!(
+                    "// @generated\nextern crate tonic_prost\n{}",
+                    prettyplease::unparse(&file)
+                )),
                 ..File::default()
             });
 
