@@ -16,7 +16,7 @@ prost = { version = "0.14.1", default-features = false, features = ["std"] }
 prost-build = { version = "0.14.1", default-features = false }
 prost-types = { version = "0.14.1", default-features = false }
 regex = { version = "1.11.2", default-features = false }
-tonic-build = "0.14.2"
+tonic-build = "0.14.1"
 
 [profile.release]
 codegen-units = 1
