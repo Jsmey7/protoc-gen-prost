@@ -75,7 +75,7 @@ impl tonic_build::Method for ProstMethod {
     }
 
     fn codec_path(&self) -> &str {
-        "tonic_prost::codec::ProstCodec"
+        "extern crate tonic_prost"
     }
 
     fn client_streaming(&self) -> bool {
