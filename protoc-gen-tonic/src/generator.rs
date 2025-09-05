@@ -191,7 +191,7 @@ impl TonicGenerator {
             res.push(File {
                 name: Some(output_filename),
                 content: Some(format!(
-                    "// @generated\nextern crate tonic_prost\n{}",
+                    "// @generated\nextern crate tonic_prost;\n{}",
                     prettyplease::unparse(&file)
                 )),
                 ..File::default()
