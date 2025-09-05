@@ -16,6 +16,7 @@ pub fn execute(raw_request: &[u8]) -> protoc_gen_prost::Result {
     let params = request.parameter().parse::<Parameters>()?;
 
     let mut builder = params.to_pbjson_builder();
+
     for file in &request.proto_file {
         builder.register_file_descriptor(file.clone());
     }
